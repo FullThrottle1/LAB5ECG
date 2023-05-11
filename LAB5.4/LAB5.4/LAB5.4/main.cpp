@@ -129,7 +129,7 @@ public:
 
         for (unsigned int i = 0; i < NUM_INSTANCES; i++) {
             Vector3f Pos(m_positions[i]);
-            Pos.y += sinf(m_scale) * m_velocity[i];
+            Pos.z -= m_scale;//Pos.y += sinf(m_scale) * m_velocity[i];
             p.WorldPos(Pos);
             WVPMatrics[i] = p.GetWVPTrans().Transpose();
             WorldMatrices[i] = p.GetWorldTrans().Transpose();
